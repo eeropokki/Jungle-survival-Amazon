@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 687ae90d01503a34eaa6324b0fb4ea09
+guid: 436a74b2f9bfdb24b800d64d069d0ac8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1347532211411968617
-    second: Grass_0
+      213: 3528475846931877430
+    second: Player_sketch_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
@@ -126,35 +126,35 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass_0
+      name: Player_sketch_head
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 11
+        y: 20
+        width: 8
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79d946fd79a9c4de0800000000000000
-      internalID: -1347532211411968617
+      spriteID: 63e8bee861aa7f030800000000000000
+      internalID: 3528475846931877430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_1
+      name: Player_sketch_body
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 11
+        y: 8
+        width: 8
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9859440bdc45ed6428e15e8024feb395
-      internalID: 1936779600
+      spriteID: ea3e23634501ce24c92e58f90c018d0b
+      internalID: -1633940338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_2
+      name: Player_sketch_left_hand
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 19
+        y: 11
+        width: 3
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfdc82f38b3c2044b9054bdb096578db
-      internalID: 453583470
+      spriteID: 4a728a339bcb8ca45a6d1bb4a3dfedf8
+      internalID: 532926214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_3
+      name: Player_sketch_right_hand
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 8
+        y: 11
+        width: 3
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,8 +207,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f796275d35673849bebbbb2115b513c
-      internalID: 2128948750
+      spriteID: bfc498392fc87ef4d8421610d39909e4
+      internalID: -2072671191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_sketch_right_leg
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1
+        width: 3
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7150a7bf7fd02ce47876cd1e62d24876
+      internalID: -1774920823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_sketch_left_leg
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1
+        width: 3
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a942a339d9a79b64b9340744b3ff962e
+      internalID: -1113785085
       vertices: []
       indices: 
       edges: []
@@ -217,7 +261,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a91c3c08167cc6e4d85e018f9fff6266
+    spriteID: d8343d477b6c8ee4799cf0f592d1fff6
     internalID: 0
     vertices: []
     indices: 
@@ -227,10 +271,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grass_0: -1347532211411968617
-      Grass_1: 1936779600
-      Grass_2: 453583470
-      Grass_3: 2128948750
+      Player_sketch_body: -1633940338
+      Player_sketch_head: 3528475846931877430
+      Player_sketch_left_hand: 532926214
+      Player_sketch_left_leg: -1113785085
+      Player_sketch_right_hand: -2072671191
+      Player_sketch_right_leg: -1774920823
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
