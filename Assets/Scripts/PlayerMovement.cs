@@ -1,23 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
+[RequireComponent(typeof(Rigidbody2D))]
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
-    private Vector2 targetPosition;
-    void Start()
+    [SerializeField] private float playerSpeed = 5.0f;
+
+    [SerializeField] private InputActionReference inputActionReference;
+
+
+    private Rigidbody2D rb;
+
+    private Vector2 moveInput;
+    private void Awake()
     {
-        targetPosition = new Vector2(0.0f, 0.0f);
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            targetPosition = Input.mousePosition;
-            targetPosition = Camera.main.ScreenToWorldPoint(new Vector3(targetPosition.x, targetPosition.y, 0.0f));
-        }
-        this.transform.position = Vector2.MoveTowards(this.transform.position, targetPosition, speed * Time.deltaTime);
+        rb.MovePosition(rb.position + moveInput.normalized * playerSpeed * Time.fixedDeltaTime);
+    }
+
+    private void OnEnable()
+    {
+        inputActionReference.action.Enable();
+        inputActionReference.action.performed += OnMovePerformed;
+        inputActionReference.action.canceled += OnMoveCanceled;
+    }
+
+    private void OnDisable()
+    {
+        inputActionReference.action.performed -= OnMovePerformed;
+        inputActionReference.action.canceled -= OnMoveCanceled;
+        inputActionReference.action.Disable();
+    }
+
+    private void OnMovePerformed(InputAction.CallbackContext ctx)
+    {
+        moveInput = ctx.ReadValue<Vector2>();
+    }
+
+    private void OnMoveCanceled(InputAction.CallbackContext context)
+    {
+        moveInput = Vector2.zero;
     }
 }
